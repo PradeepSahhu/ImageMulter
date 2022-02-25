@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //mongoose connect
-const connect = mongoose.connect("mongodb+srv://pradeep:pradeepsahu@cluster0.rmz3x.mongodb.net/imageDB?retryWrites=true&w=majority");
+const connect = mongoose.connect("mongodb+srv:");
 
 
 module.exports = connect
