@@ -1,0 +1,56 @@
+
+
+{{!-- section --}}
+<section class="section my-4">
+    <div class="container text-center">
+        <div class="title py-5 ">
+            <h1>Node file uploader</h1>
+            <p class="subtitle">Upload Image to the <strong>Server</strong></p>
+        </div>
+        {{!-- Bootstrap grid system --}}
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <form action="/uploadmultiple" enctype="multipart/form-data" method="post"> 
+                    <div clss="row">
+                        <div class="col-8">
+                            <input type="file" class="form-control" name="uploadedImages" id="formFiles" multiple>
+                        </div>
+                        <div class="col-2">
+                            <input type="submit" class="btn btn-warning" value="upload images">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        {{!-- Bootstrap Card  images--}}
+        <section class="mt-5">
+            <div class="row">
+                    {{#each images}}
+                        {{#each this}}
+                            {{#if imageBase64}}
+                                {{!-- Bootstrap cards --}}
+                                <div class="col-3">
+                                    <div class="card shadow" style="width: 18rem;">
+                                    <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img-top img-fluid" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-poppins">UI/UX Design</h5>
+                                            <p class="text-secondary font-size-09">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-info font-size-09 text-light">Go somewhere</a>
+                                        </div>
+                                    </div>
+
+                                
+                                </div>
+                                {{!-- /Bootstrap cards --}}
+                            {{/if}}
+                        {{/each}}
+                    {{/each}}
+        
+            </div>
+
+        </section>
+        {{!-- Bootstrap card imges ends here --}}
+
+    </div>
+</section>

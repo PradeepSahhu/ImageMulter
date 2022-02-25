@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.font-poppins{
+    font-family: 'Ubuntu';
+}
+.font-size-09{
+    font-size: 0.9em;
+}
+input:focus{
+    box-shadow: none !important;
+    outline: none!important;
+
+}
